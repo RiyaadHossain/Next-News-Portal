@@ -2,8 +2,14 @@ import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:3004/news')
+  const news = await res.json()
+  return { props: { news } }
+}
 
-const HomePage = () => {
+const HomePage = ({ news }) => {
+  console.log(news)
   return (
     <>
       <Head>
