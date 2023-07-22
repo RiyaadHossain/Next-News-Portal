@@ -1,6 +1,7 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
+import AllNews from "@/components/UI/AllNews";
 
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:3004/news')
@@ -9,7 +10,7 @@ export const getStaticProps = async () => {
 }
 
 const HomePage = ({ news }) => {
-  console.log(news)
+
   return (
     <>
       <Head>
@@ -22,6 +23,7 @@ const HomePage = ({ news }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
+      <AllNews news={news} />
     </>
   );
 };

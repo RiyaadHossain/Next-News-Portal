@@ -18,10 +18,10 @@ const Banner = () => (
   <Carousel effect="fade" autoplay style={{ margin: "20px 0px" }}>
     {/* slider-1 */}
     <div>
-      <Row>
+      <Row gutter={35}>
         <Col
           lg={{
-            span: 8,
+            span: 12,
           }}
         >
           <h1 style={{ fontSize: "50px" }}>
@@ -83,7 +83,7 @@ const Banner = () => (
 
         <Col
           lg={{
-            span: 16,
+            span: 12,
           }}
           style={contentStyle}
         >
@@ -93,10 +93,10 @@ const Banner = () => (
     </div>
     {/* slider-2 */}
     <div>
-      <Row>
+      <Row gutter={35}>
         <Col
           lg={{
-            span: 8,
+            span: 12,
           }}
         >
           <h1 style={{ fontSize: "50px" }}>
@@ -157,7 +157,7 @@ const Banner = () => (
 
         <Col
           lg={{
-            span: 16,
+            span: 12,
           }}
           style={contentStyle}
         >
